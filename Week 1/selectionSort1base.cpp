@@ -39,5 +39,6 @@ int main ()
     cout << "After Sorting: ";
     printArray(arr, n);
 
+    return 0;
 
 }
