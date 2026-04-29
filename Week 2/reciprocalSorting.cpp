@@ -27,6 +27,18 @@ void bubbleSort (numberPair *pr, int n)
         }
     }
 }
+void selectionSort (numberPair *pr, int n)
+{
+    for (int i=0; i<n-1; i++) {
+        int tempIndex = i;
+        for (int j=i; j<n; j++) {
+            if (pr[i].reciprocal>pr[j].reciprocal) tempIndex = j;
+        }
+        numberPair temp = pr [i];
+        pr [i] = pr [tempIndex];
+        pr [tempIndex] = temp;
+    }
+}
 int main ()
 {
     int t; cin >> t;
@@ -39,9 +51,11 @@ int main ()
 
 
     }
-    bubbleSort(arr, t);
+    selectionSort(arr, t);
     cout << fixed << setprecision(2);
     for (int i=0; i<t; i++) (i==t-1)? cout << arr[i].value << endl : cout << arr[i].value << " ";
 
     return 0;
 }
+
+// 2.0, 0.5, 10.0, -4.0
