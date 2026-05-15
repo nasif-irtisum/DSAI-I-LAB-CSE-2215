@@ -8,19 +8,13 @@ public:
     char arr[20];
 
     void push(char value){
-        if(top==size-1){
-            cout<<"Stack overflow"<<endl;
-            return ;
-        }
+        if(top==size-1) return;
         top++;
         arr[top]=value;
     }
 
     char pop(){
-        if(top==-1){
-            cout<<"Stack underflow"<<endl;
-            return '\0';
-        }
+        if(top==-1) return '\0';
         char valueAtTop = arr[top];
         top--;
         return valueAtTop;
@@ -71,7 +65,7 @@ int main(){
 
 
     if(flag==1){
-        cout<<"Balance"<<endl;
+        cout<<"Balanced"<<endl;
     }else{
         cout<<"Not Balanced"<<endl;
     }
