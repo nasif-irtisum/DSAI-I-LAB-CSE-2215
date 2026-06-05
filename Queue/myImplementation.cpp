@@ -35,6 +35,7 @@ public:
         }
         int index = qfront;
         qfront = (qfront+1)%arraySize;
+        currentSize--;
         return arr[index];
     }
 };
