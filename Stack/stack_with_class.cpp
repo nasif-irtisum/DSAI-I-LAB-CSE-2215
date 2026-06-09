@@ -30,8 +30,8 @@ public:
     void printStack ()
     {
         for (int i=0; i<=top; i++) {
-            (i+1==top) ? cout << arr[i] << endl : cout << arr [i] << " ";
-    }
+            (i==top) ? cout << arr[i] << endl : cout << arr [i] << " ";
+        }
     }
 };
 int main ()

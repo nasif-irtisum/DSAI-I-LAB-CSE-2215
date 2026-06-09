@@ -27,7 +27,7 @@ int pop ()
 void printStack ()
 {
     for (int i=0; i<=top; i++) {
-        (i+1==sz) ? cout << arr[i] << endl : cout << arr [i] << " ";
+        (i==top) ? cout << arr[i] << endl : cout << arr [i] << " ";
     }
 }
 
@@ -35,6 +35,7 @@ int main ()
 {
     for (int i=1; i<=10; i++) push(i);
     printStack();
+    cout << "Pop: " << pop() << endl;
     cout << "Pop: " << pop() << endl;
     printStack();
 }
