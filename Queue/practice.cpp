@@ -6,7 +6,7 @@ class Queue
 public:
 
     static constexpr int sz = 5;
-    int arr [5];
+    int arr [sz];
     int currentSize=0, first =0, rear=-1;
 
     void enqueue (int x)

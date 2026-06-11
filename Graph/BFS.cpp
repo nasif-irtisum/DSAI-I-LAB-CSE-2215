@@ -29,7 +29,7 @@ void BFS (vector <vector <int>> adjList, int source, int v, int e)
     queue<int>q;
     dist[source]=0;
     color[source]=GRAY;
-    source[parent]=-1;
+    //source[parent]=-1;
     q.push(source);
 
     while (!q.empty()) {
@@ -72,6 +72,8 @@ int main ()
         getRoot(i);
         cout << endl;
     }
+
+    return 0;
 }
 
 
