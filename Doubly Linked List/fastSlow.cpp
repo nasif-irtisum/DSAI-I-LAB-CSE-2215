@@ -50,10 +50,12 @@ void slowFast (int value)
 
     if (head == NULL) {
         head = newNode;
+	return;
     }
     if (head->next == NULL) {
         head->next = newNode;
         head->next->prev = head;
+	return;
     }
     Node *fast = head, *slow = head;
 
